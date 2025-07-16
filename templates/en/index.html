@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Taxi and Minibus in Nerja | Airport and Train Station Transfers{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Private taxi and minibus service in Nerja. Transfers from Málaga airport and AVE train station to Nerja, Torrox, and nearby areas. Fast online booking.">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+
+    <h1>Private Taxi and Minibus in Nerja: Transfers from Airport and Train Station</h1>
+
+    <p class="intro">
+        We offer private taxi or minibus transfers from <strong>Málaga Airport</strong> and <strong>María Zambrano Train Station</strong> to Nerja, Frigiliana, Torrox, Almuñécar, and beyond.
+    </p>
+
+    <h2>Taxi and Minibus Transfers from Airport and Train Station</h2>
+    <ul>
+        <li><strong>Málaga – Nerja Taxi:</strong> Direct, punctual, and without stops.</li>
+        <li><strong>Minibus for groups:</strong> Ideal for families or groups of more than 8 people with all your luggage.</li>
+        <li><strong>Train Station – Nerja:</strong> Professional pickup with no waiting times.</li>
+    </ul>
+
+    <h2>Return Transfers from Nerja to Málaga Airport or Other Destinations</h2>
+    <ul>
+        <li><strong>Nerja &gt; Málaga:</strong> End your holidays in Nerja and let us take you back to the airport.</li>
+        <li><strong>Other Destinations:</strong> From Nerja to wherever you need, contact us without obligation.</li>
+    </ul>
+
+    <h2>Why Choose Our Taxi or Minibus in Nerja? What Are the Prices?</h2>
+    <ul>
+        <li>Local, experienced drivers.</li>
+        <li>Modern vehicles and spacious, comfortable minibuses.</li>
+        <li>Easy booking through our website.</li>
+        <li>Reliable, personalized service tailored to you.</li>
+        <li>Check the rates section or contact us.</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{{ url_for('mostrar_reserva_en') }}" class="boton-principal">Book Now</a>
+    </div>
+
+</div>
+{% endblock %}

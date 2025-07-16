@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Reserva confirmada - VTC Nerja{% endblock %}
+
+{% block content %}
+<div class="confirmacion-container">
+    <h1>¡Gracias por tu reserva, {{ nombre }}!</h1>
+    <p><strong>Origen:</strong> {{ origen }}</p>
+    <p><strong>Destino:</strong> {{ destino }}</p>
+    <p><strong>Fecha y hora:</strong> {{ fecha }}</p>
+    {% if vuelo %}
+        <p><strong>Vuelo:</strong> {{ vuelo }}</p>
+    {% endif %}
+    {% if comentarios %}
+        <p><strong>Comentarios:</strong> {{ comentarios }}</p>
+    {% endif %}
+    <p>Te hemos enviado un correo de confirmación.</p>
+    <a href="/">Volver al inicio</a>
+</div>
+{% endblock %}

@@ -1,0 +1,321 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+
+    background-image: url("../img/fondobalconeuropa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Overlay que cubre todo el body */
+.overlay {
+    position: fixed;       /* fija en toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* negro semitransparente, ajusta el 0.3 a tu gusto */
+    z-index: 0;           /* detrás del contenido */
+}
+
+/* Contenedor principal del contenido, encima del overlay */
+.content {
+    position: relative;
+    z-index: 1;           /* encima del overlay */
+    padding: 40px;
+}
+
+.text-overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    color: #222;
+    display: inline-block;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #39444d;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Contenido general */
+.content { 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Encabezados */
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    color: #000000;
+}
+
+p {
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+/* Botones */
+.boton-principal {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #39444d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #39444d;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Separadores */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* Imágenes o secciones destacadas (si las usas más adelante) */
+.destacado {
+    background-color: #e6f0fa;
+    border-left: 5px solid #39444d;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-size: 1em;
+}
+
+.intro {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #000000;
+}
+
+.formulario-reserva {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px 40px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.formulario-reserva h1 {
+    text-align: center;
+    color: #39444d;
+    margin-bottom: 20px;
+}
+
+.formulario-reserva p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #39444d;
+}
+
+.formulario-reserva label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.formulario-reserva input,
+.formulario-reserva textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.formulario-reserva button.boton-principal {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #39444d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-reserva button.boton-principal:hover {
+    background-color: #39444d;
+}
+
+.confirmacion-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+.confirmacion-container h1 {
+    color: #39444d;
+    margin-bottom: 25px;
+}
+
+.confirmacion-container p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.confirmacion-container a {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #39444d;
+    font-weight: bold;
+}
+
+.confirmacion-container a:hover {
+    text-decoration: underline;
+}
+
+.formulario-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.formulario-container h1 {
+    text-align: center;
+    color: #39444d;
+    margin-bottom: 25px;
+}
+
+.formulario label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #39444d;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #39444d;
+}
+
+.tabla-precios td:last-child,
+.tabla-precios th:last-child {
+    text-align: right; /* Usa 'center' si lo prefieres */
+}
+
+nav {
+    background-color: #39444d;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.bandera-idioma img {
+    width: 32px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.bandera-idioma img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Destinos - VTC Nerja y alrededores{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>Destinos que cubrimos con nuestro servicio taxi</h1>
+
+    <h2>🚗 Introducción</h2>
+    <p>En nuestro servicio de transporte taxi ofrecemos traslados cómodos, seguros y puntuales a varios destinos destacados de la Axarquía y la Costa Tropical. Nuestra base se encuentra en <strong>Nerja</strong>, pero también operamos con frecuencia en municipios cercanos como <strong>Frigiliana</strong>, <strong>Torrox</strong> y <strong>Almuñécar</strong>.</p>
+
+    <hr>
+
+    <h2>🏖️ Nerja – Historia, naturaleza y mar</h2>
+    <p>Nerja es uno de los destinos más atractivos de la Costa del Sol oriental. Conocido por su clima templado durante todo el año, combina lo mejor del turismo de sol y playa con rincones culturales y naturales únicos.</p>
+    <ul>
+        <li><strong>Balcón de Europa:</strong> El mirador más famoso, con vistas espectaculares al Mediterráneo.</li>
+        <li><strong>Cuevas de Nerja:</strong> Monumento natural con miles de años de historia, conciertos y pinturas rupestres.</li>
+        <li><strong>Playas:</strong> Burriana, Calahonda y El Salón son algunas de las más visitadas.</li>
+        <li><strong>Deportes y senderismo:</strong> Rutas como el río Chíllar son perfectas para los meses cálidos.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🏡 Frigiliana – Uno de los pueblos más bonitos de España</h2>
+    <p>A solo 10 minutos en coche desde Nerja, Frigiliana es una joya blanca en la montaña, conocida por sus calles empedradas, casas encaladas y encanto andaluz.</p>
+    <ul>
+        <li>Casco histórico morisco-mudéjar.</li>
+        <li>Fábrica de miel de caña: la única activa en Europa.</li>
+        <li>Fiesta de las Tres Culturas (agosto): gastronomía, música y cultura.</li>
+        <li>Senderos y miradores naturales ideales para caminatas.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🌅 Torrox – El mejor clima de Europa</h2>
+    <p>Situado junto al mar, Torrox presume de tener "el mejor clima de Europa", ideal para turistas durante todo el año. Dividido en <strong>Torrox Costa</strong> (más turístico) y <strong>Torrox Pueblo</strong> (más tradicional).</p>
+    <ul>
+        <li>Paseo marítimo de Torrox Costa.</li>
+        <li>Playas extensas y tranquilas.</li>
+        <li>Faro de Torrox y restos romanos.</li>
+        <li>Mercados y gastronomía típica.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🌊 Almuñécar – Costa Tropical y legado histórico</h2>
+    <p>Ya en la provincia de Granada, Almuñécar es un punto clave de la Costa Tropical, donde se mezclan playas, restos romanos y actividades familiares.</p>
+    <ul>
+        <li>Castillo de San Miguel.</li>
+        <li>Acueducto romano y Parque del Majuelo.</li>
+        <li>Acuario y parque ornitológico Loro Sexi.</li>
+        <li>Playas como Velilla, San Cristóbal y La Herradura.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🚐 ¿Cómo puedo reservar un viaje a estos destinos?</h2>
+    <p>Con nuestro formulario de <a href="{{ url_for('reservar') }}">Reservar</a>, puedes elegir origen, destino y hora. Nosotros nos encargamos del resto, con un servicio profesional y personalizado.</p>
+
+    <h2>📍 ¿No encuentras tu destino?</h2>
+    <p>Consulta con nosotros. Cubrimos otros municipios cercanos como <strong>La Herradura</strong>, <strong>Maro</strong>, <strong>Cómpeta</strong> o <strong>Salobreña</strong>, según disponibilidad.</p>
+</div>
+{% endblock %}

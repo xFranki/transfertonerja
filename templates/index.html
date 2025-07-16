@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Taxi y minibús en Nerja | Traslados desde aeropuerto y AVE{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Taxi y minibús privado en Nerja. Traslados desde el aeropuerto de Málaga y estación AVE a Nerja, Torrox y alrededores. Reserva rápida online.">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+
+    <h1>Taxi y minibús privado en Nerja: traslados desde aeropuerto y estación de tren</h1>
+
+    <p class="intro">
+        Ofrecemos traslados privados en taxi o minibús desde el <strong>Aeropuerto de Málaga</strong> y la <strong>Estación María Zambrano</strong> hacia Nerja, Frigiliana, Torrox, Almuñécar y más.
+    </p>
+
+    <h2>Traslados en taxi o minibús desde aeropuerto y estación de tren.</h2>
+    <ul>
+        <li><strong>Taxi Málaga – Nerja:</strong> Directo, puntual y sin paradas.</li>
+        <li><strong>Minibús para grupos:</strong> Ideal para familias o grupos de más de 8 personas con todo el equipaje.</li>
+        <li><strong>Estación tren – Nerja:</strong> Recogida profesional y sin esperas.</li>
+    </ul>
+
+    <h2>Traslados de vuelta desde Nerja al aeropuerto de Málaga u otro destino.</h2>
+    <ul>
+        <li><strong>Nerja > Málaga:</strong> Finaliza tus vacaciones en Nerja y deja que nos ocupemos de llevarte de vuelta al aeropuerto.</li>
+        <li><strong>Otros destinos:</strong> Desde Nerja al destino que necesites, preguntanos sin compromiso </li>
+    </ul>
+
+    <h2>¿Por qué elegir nuestro taxi o minibús en Nerja?¿Cuál es el precio?</h2>
+    <ul>
+        <li>Conductores locales y experimentados.</li>
+        <li>Vehículos modernos y minibuses amplios y cómodos.</li>
+        <li>Reserva fácil desde nuestra página web.</li>
+        <li>Servicio fiable, personalizado y adaptado a ti.</li>
+        <li>Visita el apartado de precios o contactanos.</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{{ url_for('mostrar_reserva') }}" class="boton-principal">Reservar ahora</a>
+    </div>
+
+</div>
+{% endblock %}

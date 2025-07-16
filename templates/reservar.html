@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Reservar traslado - VTC Nerja{% endblock %}
+
+{% block content %}
+<div class="formulario-container">
+    <h1>Reserva tu traslado</h1>
+    <form action="/reservar" method="POST" class="formulario">
+
+        <div class="campo">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="campo">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="campo">
+            <label for="origen">Origen:</label>
+            <input type="text" id="origen" name="origen" required>
+        </div>
+
+        <div class="campo">
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino" required>
+        </div>
+
+        <div class="campo">
+            <label for="fecha">Fecha y hora:</label>
+            <input type="datetime-local" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo">
+            <label for="vuelo">Número de vuelo (si aplica):</label>
+            <input type="text" id="vuelo" name="vuelo" placeholder="Ej. VY1234">
+        </div>
+
+        <div class="campo">
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Indica aquí cualquier detalle adicional..."></textarea>
+        </div>
+
+        <div class="boton">
+            <button type="submit">Enviar reserva</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

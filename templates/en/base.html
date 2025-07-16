@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block meta %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{{ url_for('index_en') }}">Home</a></li>
+            <li><a href="{{ url_for('destinos_en') }}">Destinations</a></li>
+            <li><a href="{{ url_for('tarifas_en') }}">Rates</a></li>
+            <li><a href="{{ url_for('mostrar_reserva_en') }}">Book</a></li>
+        </ul>
+
+        <div class="lang-switcher">
+            {# Construir la ruta en español #}
+            {% if current_path.startswith('/en') %}
+                {% set es_path = current_path[3:] %}
+            {% else %}
+                {% set es_path = current_path %}
+            {% endif %}
+            <a href="{{ es_path }}" title="Español">
+                <img src="{{ url_for('static', filename='img/españa.png') }}" alt="Español" width="24" />
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>© 2025 VTC Nerja</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% macro get_en_path(path) %}
+    {%- if path == '/' -%}
+        /en/
+    {%- elif not path.startswith('/en') -%}
+        /en{{ path }}
+    {%- else -%}
+        {{ path }}
+    {%- endif -%}
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}VTC Nerja{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+<nav>
+    <div class="contenedor-nav"></div>
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('mostrar_reserva') }}">Reservar</a>
+        <a href="{{ url_for('destinos') }}">Destinos</a>
+        <a href="{{ url_for('tarifas') }}">Tarifas</a>
+    </div>
+    <div class="bandera-idioma">
+        <a href="{{ get_en_path(request.path) }}" title="English">
+            <img src="{{ url_for('static', filename='img/uk.png') }}" alt="English" />
+        </a>
+        <a href="{{ request.path }}" title="Español">
+            <img src="{{ url_for('static', filename='img/españa.png') }}" alt="Español" />
+        </a>
+    </div>
+</nav>
+
+<div class="content">
+    <div class="text-overlay">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>
